@@ -12,13 +12,13 @@
 
 <body>
 
-    <div id="menu">
+    <!-- <div id="menu">
 
         <a href=" ">Home</a>
         <a href=" ">About</a>
         <a href=" ">contact</a>
         <a href=" ">menu</a>
-    </div>
+    </div> -->
 
     <!-- <div>
      <table>
@@ -55,14 +55,14 @@
 
     <script>
 
-        let box = document.getElementById("menu")
-        console.dir(box);
-        console.log(box.tagName);
-        console.log(box.nodeName);
-        console.log(box.innerHTML);
-        console.log(box.outerHTML);
-        console.log(box.textContent);
-        box.hidden = true;
+        // let box = document.getElementById("menu")
+        // console.dir(box);
+        // console.log(box.tagName);
+        // console.log(box.nodeName);
+        // console.log(box.innerHTML);
+        // console.log(box.outerHTML);
+        // console.log(box.textContent);
+        // box.hidden = true;
 
 
 
@@ -454,27 +454,50 @@
         // document.body.style.backgroundColor = color;
 
         //second largest 
-        let numbers = [10, 45, 23, 89, 67, 89, 34, 12];
+        // let numbers = [10, 45, 23, 89, 67, 89, 34, 12];
 
-        function secondLargest(numbers) {
-            let largest = -Infinity;
-            let secondLargest = -Infinity;
+        // function secondLargest(numbers) {
+        //     let largest = -Infinity;
+        //     let secondLargest = -Infinity;
 
-            for (let num of numbers) {
-                if (num > largest) {
-                    secondLargest = largest;
-                    largest = num;
-                }
-                else if (num > secondLargest && num !== largest) {
-                    secondLargest = num;
-                }
+        //     for (let num of numbers) {
+        //         if (num > largest) {
+        //             secondLargest = largest;
+        //             largest = num;
+        //         }
+        //         else if (num > secondLargest && num !== largest) {
+        //             secondLargest = num;
+        //         }
+        //     }
+
+        //     return secondLargest;
+        // }
+
+        // console.log("Second Largest Number:", secondLargest(numbers));
+
+        //oops 
+
+        // prototype 
+
+
+        let sachin = {
+            work: "student",
+            greet: function () {
+                console.log("hello");
+
             }
-
-            return secondLargest;
         }
-
-        console.log("Second Largest Number:", secondLargest(numbers));
-
+        let student = {
+            about: function () {
+                console.log("Hello");
+            }
+        }
+        let human = {
+            name: "Rohit",
+        }
+        Object.setPrototypeOf(student, human);
+        Object.setPrototypeOf(human, sachin);
+        human.greet();
     </script>
 
 
