@@ -498,6 +498,19 @@
         Object.setPrototypeOf(student, human);
         Object.setPrototypeOf(human, sachin);
         human.greet();
+        let cat= {
+            eating: function(){
+                console.log("cat is eating food");
+                
+            }
+        }
+        
+        let tiger= {
+            
+        }
+        Object.setPrototypeOf(tiger, cat)
+        tiger.eating()
+
     </script>
 
 
